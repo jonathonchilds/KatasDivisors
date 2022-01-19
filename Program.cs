@@ -7,32 +7,27 @@ namespace KatasDivisors
     {
         public static int[] Divisors(int n)
         {
-            //create function named divisors
-            // assign that function an int > 1
-            var divisors = 42;
+            List<int> divisors = new List<int>();
 
-
-            private static DivisorCalculator (int divisors)
+            for (int i = 2; i < n; i++)
             {
-                for (var index = 0; index < divisors; index++)
+                if (n % 2 == 0)
                 {
-                    if (divisors % 2 == 0)
-                    {
-                        Divisors.add(divisors / index)
-                          }
+                    divisors.Add(i);
                 }
-                // order integer's divisors from smallest to largest
-                Divisors.sort();
             }
-            // make function return an array with integer's divisors
-            var Divisors = new Array[];
-
-
-            // if the function is prime, return null 
+            if (divisors.Count < 1)
+            {
+                return null;
+            }
+            else
+            {
+                return divisors.ToArray();
+            }
         }
-
     }
 }
+
 
 // using System.Collections.Generic;
 // public class Kata
